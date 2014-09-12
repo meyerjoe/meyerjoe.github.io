@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="backend-core" module="backend-core_2.11" revision="1.0-SNAPSHOT" status="integration" publication="20140912152548">
+		<description>
+		backend-core
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		
+		<conf name="pom" visibility="public" description=""/>
+		
+	</configurations>
+	<publications>
+		<artifact name="backend-core_2.11" type="pom" ext="pom" conf="pom"/>
+		<artifact name="backend-core_2.11" type="jar" ext="jar" conf="compile"/>
+		<artifact name="backend-core_2.11" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.0.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.3.4" conf="test->default(compile)"/>
+		
+		<dependency org="com.typesafe.play" name="play-java_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-jpa_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.1.9.Final" conf="compile->default(compile)"/>
+		<dependency org="postgresql" name="postgresql" rev="9.1-901.jdbc4" conf="compile->default(compile)"/>
+		<dependency org="org.jasypt" name="jasypt" rev="1.9.0" conf="compile->default(compile)"/>
+		<dependency org="org.jasypt" name="jasypt-hibernate4" rev="1.9.0" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-email" rev="1.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.3.4" conf="compile->default(compile)"/>
+	</dependencies>
+</ivy-module>
